@@ -26,7 +26,7 @@ if "uploaded_data" not in st.session_state:
     st.session_state.uploaded_data = None # Placeholder for uploaded CSV data
 # Display previous chat history using st.chat_message (if available)
 for role, message in st.session_state.chat_history:
-st.chat_message(role).markdown(message)
+    st.chat_message(role).markdown(message)
 # Add a file uploader for CSV data
 st.subheader("Upload CSV for Analysis")
 uploaded_file = st.file_uploader("Choose a CSV file", type=["csv"])
